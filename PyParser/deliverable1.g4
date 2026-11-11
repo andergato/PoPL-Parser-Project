@@ -1,11 +1,17 @@
 grammar deliverable1;
 
-start: statement* EOF ;
-statement: assignment| assignment NEWLINE | NEWLINE ;
-assignment: ID OPERATOR expression ;
-expression: ID | ID OPERATOR ID expression* | OPERATOR ID ;
+program : (statement NEWLINE | NEWLINE)* EOF ;
 
-ID: [a-zA-Z_][a-zA-Z0-9_]* | '-'?[0-9]+'.'*[0-9]* | '"'ID* ;
+statement: assignment 
+         | expr 
+         ;
+
+assignment: ID OPERATOR expr ;
+
+expr: ID | ID OPERATOR ID expr* | OPERATOR ID ;
+
+ID: [a-zA-Z_][a-zA-Z0-9_]* | NUMBER | '"'ID* ;
+NUMBER: '-'?[0-9]+'.'*[0-9]* ;
 OPERATOR: '=' | '+=' | '*=' | '-=' | '/=' | '/' | '%' | '-' | '+' | '*' ;
 NEWLINE     : '\r'? '\n' ;
 WS          : [ \t]+ -> skip ;  

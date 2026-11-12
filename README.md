@@ -7,7 +7,8 @@
 Currently supported (Deliverable 1):
 - Addition (`+`)
 - Assignment (`=`)
-
+- ID/Number/Boolean/Strings
+- whitespace, and line parsing
 ## Team POPLr Forest
 
 - Alex Bush

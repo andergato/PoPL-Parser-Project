@@ -1,6 +1,6 @@
 grammar deliverable1;
 
-program : (statement NEWLINE* | NEWLINE)* EOF ;
+program : (statement (NEWLINE+ statement)* | NEWLINE)* EOF ;
 
 statement: assignment 
          | expr 

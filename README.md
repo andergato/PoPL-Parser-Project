@@ -10,7 +10,7 @@ Currently supported (Deliverable 1):
 - ID/Number/Boolean/Strings
 - Whitespace, and line parsing
 - Arrays of ints, floats, strings
-- Nested arrays
+- Multi-dimensional arrays
 ## Team POPLr Forest
 
 - Alex Bush

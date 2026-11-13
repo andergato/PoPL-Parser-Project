@@ -21,9 +21,10 @@ expr: expr ('*' | '/' | '%') expr // pemdas
 atom: ID | NUMBER | STRING | BOOL;
 
 // implement array here
-array: '[' (NUMBER',')* NUMBER* ']'    // Floats or ints
-     | '[' (STRING',')* STRING* ']'    // Strings
-     | '[' (array',')* array* ']'      // Array of arrays
+array: '[' (NUMBER',')* NUMBER ']'    // Floats or ints
+     | '[' (STRING',')* STRING ']'    // Strings
+     | '[' (array',')* array ']'      // Array of arrays
+     | '[]'                           // Empty array
      ;
 
 // arithmetic operators (+ - * / %) are literals in expr above, so only assignemnt need parse

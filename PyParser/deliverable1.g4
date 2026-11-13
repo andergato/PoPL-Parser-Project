@@ -6,7 +6,9 @@ statement: assignment
          | expr 
          ;
 
-assignment: ID ASSIGN_OP expr ;
+assignment: ID ASSIGN_OP expr 
+          | ID ASSIGN_OP array
+          ;
 
 expr: expr ('*' | '/' | '%') expr // pemdas
     | expr ('+' | '-') expr
@@ -19,6 +21,10 @@ expr: expr ('*' | '/' | '%') expr // pemdas
 atom: ID | NUMBER | STRING | BOOL;
 
 // implement array here
+array: '[' (NUMBER', ')* NUMBER* ']'    // Floats or ints
+     | '[' (STRING', ')* STRING* ']'    // Strings
+     | '[' (array', ')* array* ']'      // Array of arrays
+     ;
 
 // arithmetic operators (+ - * / %) are literals in expr above, so only assignemnt need parse
 ASSIGN_OP: '=' | '+=' | '-=' | '*=' | '/=' ;

@@ -8,7 +8,9 @@ Currently supported (Deliverable 1):
 - Addition (`+`)
 - Assignment (`=`)
 - ID/Number/Boolean/Strings
-- whitespace, and line parsing
+- Whitespace, and line parsing
+- Arrays of ints, floats, strings
+- Nested arrays
 ## Team POPLr Forest
 
 - Alex Bush

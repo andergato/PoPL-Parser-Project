@@ -3,7 +3,7 @@ grammar deliverable1;
 program : (statement (NEWLINE+ statement)* | NEWLINE)* EOF ;
 
 statement: assignment 
-         | expr 
+         | expr
          ;
 
 assignment: ID ASSIGN_OP expr 
@@ -20,7 +20,6 @@ expr: expr ('*' | '/' | '%') expr // pemdas
 // ID = var name | NUMBER = int or float | STRING = quoted literal text
 atom: ID | NUMBER | STRING | BOOL;
 
-// implement array here
 array: '[' (NUMBER',')* NUMBER* ']'    // Floats or ints
      | '[' (STRING',')* STRING* ']'    // Strings
      | '[' (array',')* array* ']'      // Array of arrays

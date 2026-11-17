@@ -3,7 +3,7 @@ grammar deliverable1;
 program : (statement (NEWLINE+ statement)* | NEWLINE)* EOF ;
 
 statement: assignment 
-         | expr 
+         | expr
          ;
 
 assignment: ID ASSIGN_OP expr 

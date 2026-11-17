@@ -21,9 +21,11 @@ expr: expr ('*' | '/' | '%') expr // pemdas
 // ID = var name | NUMBER = int or float | STRING = quoted literal text
 atom: ID | NUMBER | STRING | BOOL;
 
-array: '[' (NUMBER',')* NUMBER* ']'    // Floats or ints
-     | '[' (STRING',')* STRING* ']'    // Strings
-     | '[' (array',')* array* ']'      // Array of arrays
+// implement array here
+array: '[' (NUMBER',')* NUMBER ']'    // Floats or ints
+     | '[' (STRING',')* STRING ']'    // Strings
+     | '[' (array',')* array ']'      // Array of arrays
+     | '[]'                           // Empty array
      ;
 
 // Conditional block

@@ -20,9 +20,10 @@ expr: expr ('*' | '/' | '%') expr // pemdas
 // ID = var name | NUMBER = int or float | STRING = quoted literal text
 atom: ID | NUMBER | STRING | BOOL;
 
-array: '[' (NUMBER',')* NUMBER* ']'    // Floats or ints
-     | '[' (STRING',')* STRING* ']'    // Strings
-     | '[' (array',')* array* ']'      // Array of arrays
+array: '[' (NUMBER',')* NUMBER ']'    // Floats or ints
+     | '[' (STRING',')* STRING ']'    // Strings
+     | '[' (array',')* array ']'      // Array of arrays
+     | '[]'                           // Empty array
      ;
 
 // arithmetic operators (+ - * / %) are literals in expr above, so only assignemnt need parse

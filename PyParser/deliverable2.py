@@ -1,12 +1,12 @@
 from antlr4 import *
-from deliverable1Parser import deliverable1Parser
-from deliverable1Lexer import deliverable1Lexer
+from deliverable2Parser import deliverable2Parser
+from deliverable2Lexer import deliverable2Lexer
 
 def main(file_name):
     input_stream = FileStream(file_name, encoding='utf-8')
-    lexer = deliverable1Lexer(input_stream)
+    lexer = deliverable2Lexer(input_stream)
     stream = CommonTokenStream(lexer)
-    parser = deliverable1Parser(stream)
+    parser = deliverable2Parser(stream)
     tree = parser.program()
     print(tree.toStringTree(recog=parser))
 

@@ -2,3 +2,6 @@ PyParser/*.java
 PyParser/*.tokens
 PyParser/*.interp
 .antlr/
+PyParser/*Lexer.py
+PyParser/*Parser.py
+PyParser/*Listener.py
